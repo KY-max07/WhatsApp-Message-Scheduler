@@ -1,4 +1,4 @@
-# Twilio WhatsApp Message Scheduler
+#WhatsApp Message Scheduler
 
 ## Overview
 
