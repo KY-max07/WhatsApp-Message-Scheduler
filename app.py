@@ -6,8 +6,8 @@ import time
 
 # Twilio account info
 
-account_sid = ""
-auth_token=""
+account_sid = "AC5fc83b943474c062684a73d75a706896"
+auth_token="78b52cbebf12c879c23f3e83a34bbb85"
 client = Client(account_sid, auth_token)
 
 
@@ -18,20 +18,20 @@ def send_message(recipient_number, message):
         message = client.messages.create(
             from_= "whatsapp:+14155238886",
             body = message,
-            to = f"whatsapp:{recipient_number}"
+            to = f"WhatsApp:{recipient_number}"
             
         )
         print(f"message sent successfully!")
     except Exception as e:
-        print('an error occurred', e)
+        print('an error occurred ', e)
         
         
 #user input
 name = input('Enter your name : ') 
-recipient_number = input('enter he recipient WhatsApp number with Country code (+91) : ')
+recipient_number = input('enter the recipient WhatsApp number with Country code (+91) : ')
 message = input(f"enter the message : ")   
 
-# parse date and time & calculate delay
+# Parse date and time & calculate the delay
 
 date_str = input('enter the date to send the message (YYYY-MM-DD) : ')
 time_str = input( "Enter the time to send the message (HH:MM) : ")
